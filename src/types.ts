@@ -10,7 +10,7 @@ export interface Snake {
 
 export type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
 
-export type CellType = 'empty' | 'snake-head' | 'snake-body' | 'food' | 'special-food' | 'obstacle' | 'power-up' | 'snake2-head' | 'snake2-body';
+export type CellType = 'empty' | 'snake-head' | 'snake-body' | 'food' | 'special-food' | 'obstacle' | 'power-up' | 'snake1-head' | 'snake1-body' | 'snake2-head' | 'snake2-body';
 
 export type GameMode = 'single' | 'multi';
 

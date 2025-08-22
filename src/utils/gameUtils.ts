@@ -1,4 +1,4 @@
-import { Position, Direction, Snake, PowerUpType, Obstacle } from '../types';
+import { Position, Direction, PowerUpType, Obstacle } from '../types';
 
 export const GRID_SIZE = 20;
 export const INITIAL_SPEED = 150;
@@ -19,7 +19,7 @@ export const isPositionEqual = (pos1: Position, pos2: Position): boolean => {
   return pos1.x === pos2.x && pos1.y === pos2.y;
 };
 
-export const isValidMove = (newHead: Position, snake: Snake, obstacles: Obstacle[], hasPhaseThrough: boolean): boolean => {
+export const isValidMove = (newHead: Position, obstacles: Obstacle[], hasPhaseThrough: boolean): boolean => {
   // 检查边界
   if (newHead.x < 0 || newHead.x >= GRID_SIZE || newHead.y < 0 || newHead.y >= GRID_SIZE) {
     return false;

@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import GameGrid from './GameGrid';
 import GameInfo from './GameInfo';
 import GameOverlay from './GameOverlay';
-import { Direction } from '../types';
+
 
 const Game: React.FC = () => {
   const { gameState, resetGame, pauseGame, changeDirection, changePlayerDirection, goToMenu, startSinglePlayer, startMultiPlayer } = useGame();

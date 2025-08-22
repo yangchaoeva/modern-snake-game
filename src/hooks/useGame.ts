@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { GameState, Direction, Position, PowerUpType, Obstacle, PlayerSnake } from '../types';
+import { GameState, Direction, Position, PowerUpType, PlayerSnake } from '../types';
 import {
   GRID_SIZE,
   getRandomPosition,
@@ -9,9 +9,7 @@ import {
   getOppositeDirection,
   calculateScore,
   calculateSpeed,
-  generateObstacles,
-  generateObstaclesAwayFromSnakeHead,
-  getPowerUpColor
+  generateObstaclesAwayFromSnakeHead
 } from '../utils/gameUtils';
 
 const POWER_UP_TYPES: PowerUpType[] = ['slow-motion', 'invincible', 'double-score', 'phase-through'];
@@ -437,7 +435,7 @@ export const useGame = () => {
       }
       
       // 检查碰撞
-      if (!hasInvincible && !isValidMove(finalNewHead, snake, obstacles, hasPhaseThrough)) {
+      if (!hasInvincible && !isValidMove(finalNewHead, obstacles, hasPhaseThrough)) {
         return {
           ...prev,
           gameStatus: 'game-over'

@@ -1,6 +1,6 @@
 import React from 'react';
-import { GameState, CellType, Position } from '../types';
-import { GRID_SIZE, isPositionEqual, getPowerUpColor } from '../utils/gameUtils';
+import { GameState, CellType } from '../types';
+import { GRID_SIZE, isPositionEqual } from '../utils/gameUtils';
 
 interface GameGridProps {
   gameState: GameState;
