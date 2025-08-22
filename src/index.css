@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white font-mono;
+  }
+}
+
+@layer components {
+  .game-cell {
+    @apply w-8 h-8 border border-gray-700;
+  }
+  
+  .snake-head {
+    @apply bg-green-400 animate-glow;
+  }
+  
+  .snake-body {
+    @apply bg-green-500;
+  }
+  
+  .snake1-head {
+    @apply bg-green-400 animate-glow;
+  }
+  
+  .snake1-body {
+    @apply bg-green-500;
+  }
+  
+  .snake2-head {
+    @apply bg-pink-400 animate-glow;
+  }
+  
+  .snake2-body {
+    @apply bg-pink-500;
+  }
+  
+  .food {
+    @apply bg-red-500 animate-pulse-fast;
+  }
+  
+  .special-food {
+    @apply bg-yellow-400 animate-bounce-slow;
+  }
+  
+  .obstacle {
+    @apply bg-gray-600;
+  }
+  
+  .power-up {
+    @apply bg-blue-400 animate-pulse;
+  }
+}
